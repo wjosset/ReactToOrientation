@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orientation: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icc-yR-XYI">
+                                <rect key="frame" x="0.0" y="303" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ZAb-sf-IeE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kb-OR-txC">
+                                <rect key="frame" x="121.5" y="782" width="171" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0bA-AN-7ql"/>
+                                </constraints>
+                                <state key="normal" title="Change color view frame"/>
+                                <connections>
+                                    <action selector="didTapOnChangeColorButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="PPS-rZ-PtR"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hY4-U4-1gi">
+                                <rect key="frame" x="0.0" y="754" width="414" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="4kd-UF-tZu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hY4-U4-1gi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="1p5-UL-vEE"/>
+                            <constraint firstItem="2kb-OR-txC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5Gi-p1-zCm"/>
+                            <constraint firstItem="icc-yR-XYI" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="9Wg-qV-13v"/>
+                            <constraint firstItem="2kb-OR-txC" firstAttribute="top" secondItem="hY4-U4-1gi" secondAttribute="bottom" constant="8" id="CSv-7d-dct"/>
+                            <constraint firstItem="icc-yR-XYI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="D48-Rv-3Kg"/>
+                            <constraint firstItem="icc-yR-XYI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZIx-0q-TOa"/>
+                            <constraint firstItem="hY4-U4-1gi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cpj-Vg-1Ec"/>
+                            <constraint firstItem="2kb-OR-txC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIV-0m-vou"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorView" destination="hY4-U4-1gi" id="dw1-YX-5yG"/>
+                        <outlet property="orientationLabel" destination="icc-yR-XYI" id="NsF-Xq-3ar"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+</document>
