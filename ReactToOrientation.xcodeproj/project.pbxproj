@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4EB96F09241246F000DB7EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB96F08241246F000DB7EA3 /* AppDelegate.swift */; };
 		4EB96F0B241246F000DB7EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB96F0A241246F000DB7EA3 /* SceneDelegate.swift */; };
-		4EB96F0D241246F000DB7EA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB96F0C241246F000DB7EA3 /* ViewController.swift */; };
+		4EB96F0D241246F000DB7EA3 /* OrientationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB96F0C241246F000DB7EA3 /* OrientationViewController.swift */; };
 		4EB96F10241246F000DB7EA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB96F0E241246F000DB7EA3 /* Main.storyboard */; };
 		4EB96F12241246F300DB7EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB96F11241246F300DB7EA3 /* Assets.xcassets */; };
 		4EB96F15241246F300DB7EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB96F13241246F300DB7EA3 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		4EB96F05241246F000DB7EA3 /* ReactToOrientation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactToOrientation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB96F08241246F000DB7EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB96F0A241246F000DB7EA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4EB96F0C241246F000DB7EA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EB96F0C241246F000DB7EA3 /* OrientationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationViewController.swift; sourceTree = "<group>"; };
 		4EB96F0F241246F000DB7EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EB96F11241246F300DB7EA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EB96F14241246F300DB7EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				4EB96F08241246F000DB7EA3 /* AppDelegate.swift */,
 				4EB96F0A241246F000DB7EA3 /* SceneDelegate.swift */,
-				4EB96F0C241246F000DB7EA3 /* ViewController.swift */,
+				4EB96F0C241246F000DB7EA3 /* OrientationViewController.swift */,
 				4EB96F0E241246F000DB7EA3 /* Main.storyboard */,
 				4EB96F11241246F300DB7EA3 /* Assets.xcassets */,
 				4EB96F13241246F300DB7EA3 /* LaunchScreen.storyboard */,
@@ -94,7 +94,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = wilfriedjosset;
 				TargetAttributes = {
 					4EB96F04241246F000DB7EA3 = {
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EB96F0D241246F000DB7EA3 /* ViewController.swift in Sources */,
+				4EB96F0D241246F000DB7EA3 /* OrientationViewController.swift in Sources */,
 				4EB96F09241246F000DB7EA3 /* AppDelegate.swift in Sources */,
 				4EB96F0B241246F000DB7EA3 /* SceneDelegate.swift in Sources */,
 			);
@@ -192,6 +192,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +253,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -285,7 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 83EW3FZN54;
+				DEVELOPMENT_TEAM = 87TW9242MB;
 				INFOPLIST_FILE = ReactToOrientation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 83EW3FZN54;
+				DEVELOPMENT_TEAM = 87TW9242MB;
 				INFOPLIST_FILE = ReactToOrientation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

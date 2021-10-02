@@ -1,25 +1,20 @@
 import UIKit
 
-class ViewController: UIViewController {
+class OrientationViewController: UIViewController {
 	
 	
-	// MARK: - Internal
+	// MARK: - InterfaceBuilder
 	
 	// MARK: IBOutlets
 	
-	@IBOutlet var orientationLabel: UILabel!
-	@IBOutlet var colorView: UIView!
+	@IBOutlet private var orientationLabel: UILabel!
+	@IBOutlet private var colorView: UIView!
 	
 	// MARK: IBActions
 	
-	@IBAction func didTapOnChangeColorButton() {
+	@IBAction private func didTapOnChangeColorButton() {
 		changeColorView()
 	}
-	
-	
-	
-	
-	// MARK: - Override
 	
 	// MARK: Lifecycle - Standard
 	
@@ -44,9 +39,7 @@ class ViewController: UIViewController {
 	override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
 		super.willTransition(to: newCollection, with: coordinator)
 		
-		print()
-		print("❗️🥳 User has rotated the device!!!")
-		print()
+		print("\n❗️🥳 User has rotated the device!!! \n")
 		
 		changeTextOfOrientationLabelIfIndicatedStep(step: .willTransitionNewCollection)
 	}
@@ -91,7 +84,7 @@ class ViewController: UIViewController {
 	
 	/// Description which describes the current device orientation together with the interface orientation
 	private var orientationDescription: String {
-		guard let interfaceOrientation = windowInterfaceOrientation else { return "" }
+		guard let interfaceOrientation = windowInterfaceOrientation else { return "Undefined" }
 		
 		let description =
 		"""
