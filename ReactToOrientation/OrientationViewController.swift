@@ -3,7 +3,7 @@ import UIKit
 class OrientationViewController: UIViewController {
 	
 	
-	// MARK: - InterfaceBuilder
+	// MARK: - INTERFACE BUILDER
 	
 	// MARK: IBOutlets
 	
@@ -15,6 +15,10 @@ class OrientationViewController: UIViewController {
 	@IBAction private func didTapOnChangeColorButton() {
 		changeColorView()
 	}
+	
+	
+	// MARK: - INTERNAL
+	
 	
 	// MARK: Lifecycle - Standard
 	
@@ -57,22 +61,18 @@ class OrientationViewController: UIViewController {
 	
 	
 	
-	// MARK: - Private
+	// MARK: - PRIVATE
 	
 	
-	// MARK: Properties - Private
+	// MARK: Private - Properties
 	
-	// ⚠️Change lifecycleStepsUpdatingLabel to update label at the indicated lifecycle steps
+	// ⚠️Change lifeCycleStepsUpdatingLabel to update label at the indicated lifecycle steps
 	
 	/// Defines all the lifecycle steps that should update the orientation description label
-	private let lifecycleStepsUpdatingLabel: [LifeCycleOrientationStep] = [
-			.viewDidAppear,
-			.traitCollectionDidChange
-		]
-	
-	/// Colors to indicate to the user that the button has been pushed
-	private let colors: [UIColor] = [.brown, .cyan, .red, .blue]
-	private var colorIndex = 0
+	private let lifeCycleStepsUpdatingLabel: [LifeCycleOrientationStep] = [
+		.viewDidAppear,
+		.traitCollectionDidChange
+	]
 	
 	/// Interface orientation
 	private var windowInterfaceOrientation: UIInterfaceOrientation? {
@@ -87,29 +87,30 @@ class OrientationViewController: UIViewController {
 		guard let interfaceOrientation = windowInterfaceOrientation else { return "Undefined" }
 		
 		let description =
-		"""
-		📱Device Orientation:
-		Is in portrait mode => \(deviceOrientation.isPortrait ? "✅" : "❌")
-		Is in landscape mode => \(deviceOrientation.isLandscape ? "✅" : "❌")
-		Is in flat mode => \(deviceOrientation.isFlat ? "✅" : "❌")
-		Is in valid orientation => \(deviceOrientation.isValidInterfaceOrientation ? "✅" : "❌")
-		
-		⬆️Interface Orientation:
-		Is in portrait mode => \(interfaceOrientation.isPortrait ? "✅" : "❌")
-		Is in landscape mode => \(interfaceOrientation.isLandscape ? "✅" : "❌")
-		"""
+  """
+  📱Device Orientation:
+  Is in portrait mode => \(deviceOrientation.isPortrait.emojiDescription)
+  Is in landscape mode => \(deviceOrientation.isLandscape.emojiDescription)
+  Is in flat mode => \(deviceOrientation.isFlat.emojiDescription)
+  Is in valid orientation => \(deviceOrientation.isValidInterfaceOrientation.emojiDescription)
+  
+  ⬆️Interface Orientation:
+  Is in portrait mode => \(interfaceOrientation.isPortrait.emojiDescription)
+  Is in landscape mode => \(interfaceOrientation.isLandscape.emojiDescription)
+  """
 		
 		return description
 	}
 	
 	
 	
-	// MARK: Methods - Private
+	
+	// MARK: Private - Methods
 	
 	private func changeTextOfOrientationLabelIfIndicatedStep(step: LifeCycleOrientationStep) {
 		printOrientationDescriptionToConsole(step: step)
 		
-		if lifecycleStepsUpdatingLabel.contains(step) {
+		if lifeCycleStepsUpdatingLabel.contains(step) {
 			orientationLabel.text = orientationDescription
 		}
 	}
@@ -123,13 +124,14 @@ class OrientationViewController: UIViewController {
 	
 	/// Function which change the color view bound in order to trigger viewDidLayoutSubviews()
 	private func changeColorView() {
-		colorView.backgroundColor = colors[colorIndex % colors.count]
+		swapColorOnColorView()
 		colorView.frame = .zero
-		colorIndex += 1
+	}
+	
+	/// Function which provide the feedback to the user the fact that he tapped on the change color view frame button
+	private func swapColorOnColorView() {
+		colorView.backgroundColor = colorView.backgroundColor == .green ? .orange : .green
 	}
 }
-
-
-
 
 
