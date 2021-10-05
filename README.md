@@ -12,8 +12,9 @@ Additionnally, this project helps to depictate a common misconception that we ha
 
 As an iOS developer, we should really make a difference between:
 
-Device Orientation => Indicates the orientation of the physical device
-Interface Orientation => Indicates the orientation of the interface displayed on the screen
+1. Device Orientation: Indicates the orientation of the physical device
+2. Interface Orientation: Indicates the orientation of the interface displayed on the screen
+
 There are many scenarios where those 2 values are mismatching such as:
 
 - When you lock your screen orientation
